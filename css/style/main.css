@@ -1,5 +1,5 @@
 :root {
-  --main-color: #eb5757;
+  --main-color: #01a8ee;
   --bg-color: #f4f4f4;
   --bg-content-color: #fff;
   --bg-menu: #eceef2;
@@ -580,6 +580,8 @@ overflows table td {
   margin-top: calc(2.25 * 16px + 32px);
   color: #444;
   background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 10px 30px 0 rgba(0,0,0,0.3);
   justify-content: flex-start;
   align-content: flex-start;
   flex-direction: column;
@@ -678,10 +680,6 @@ overflows table td {
   overflow: hidden;
   text-indent: -9999px;
   z-index: 0;
-}
-.post-title {
-  padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
-  text-align: center;
 }
 .post-meta__date {
   color: #808080;
@@ -918,6 +916,11 @@ overflows table td {
 }
 .header .header__right .dropdown-menus .dropdown-menu {
   padding: 10px;
+}
+@media screen and (min-width: 1080px) {
+  .header {
+    position: sticky;
+  }
 }
 @media screen and (max-width: 764px) {
   .navbar__menus {
