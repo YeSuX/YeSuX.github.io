@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    <link rel="shortcut icon" type='image/x-icon' href="/futuristic_s.png">
+
+
+    <!-- meta -->
+
+
+<title>开始学习HTML | 博客</title>
+
+
+    <meta name="keywords" content="HTML">
+
+
+    <!-- OpenGraph -->
+ 
+    <meta name="description" content="什么是HTMLHTML不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。它由一系列元素组成，这些元素可以包围不同部分的内容，使其以某种方式呈现或者工作。  HTML标签不区分大小写。不过，从一致性、可读性方面来说，最好仅使用小写字母。  刨析一个HTML元素 这个元素主要部分有：  开始标签：包含元素的名称（本例为 p），被左、右角括号所包围。表示元素从这里开始或者开始起作用 ——">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开始学习HTML">
+<meta property="og:url" content="https://yesux.github.io/2020/09/15/%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0HTML/index.html">
+<meta property="og:site_name" content="博客">
+<meta property="og:description" content="什么是HTMLHTML不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。它由一系列元素组成，这些元素可以包围不同部分的内容，使其以某种方式呈现或者工作。  HTML标签不区分大小写。不过，从一致性、可读性方面来说，最好仅使用小写字母。  刨析一个HTML元素 这个元素主要部分有：  开始标签：包含元素的名称（本例为 p），被左、右角括号所包围。表示元素从这里开始或者开始起作用 ——">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yesux.github.io/images/html_index.jpg">
+<meta property="article:published_time" content="2020-09-15T06:11:05.000Z">
+<meta property="article:modified_time" content="2020-09-15T07:46:36.684Z">
+<meta property="article:author" content="叶苏雄">
+<meta property="article:tag" content="HTML">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yesux.github.io/images/html_index.jpg">
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+
+    
+<link rel="stylesheet" href="/css/style/dark.css">
+
+    
+<script src="/js/darkmode.js"></script>
+
+
+
+    
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+        
+    
+
+    
+    
+
+    
+    <link rel="stylesheet" href="/css/style/note.css" media="none" onload="this.media='all'">
+
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+    <body>
+        <div id="app">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">
+                Ysx's Blog
+            </span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="navbar-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="navbar-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/pictures/" class="navbar-menu button">
+                        画廊
+                    </a>
+                
+                    <a href="/pages/" class="navbar-menu button">
+                        Page
+                    </a>
+                
+            </div>
+        
+        
+        
+
+        
+        
+    <a href="javaScript:void(0);" id="btn-toggle-dark">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </a>
+
+
+         
+    <a href="javaScript:void(0);" id="b2t" aria-label="Back to Top" title="Back to Top">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='32' height='32' fill="currentColor" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.889,11.611c-0.17,0.17-0.443,0.17-0.612,0l-3.189-3.187l-3.363,3.36c-0.171,0.171-0.441,0.171-0.612,0c-0.172-0.169-0.172-0.443,0-0.611l3.667-3.669c0.17-0.17,0.445-0.172,0.614,0l3.496,3.493C14.058,11.167,14.061,11.443,13.889,11.611 M18.25,10c0,4.558-3.693,8.25-8.25,8.25c-4.557,0-8.25-3.692-8.25-8.25c0-4.557,3.693-8.25,8.25-8.25C14.557,1.75,18.25,5.443,18.25,10 M17.383,10c0-4.07-3.312-7.382-7.383-7.382S2.618,5.93,2.618,10S5.93,17.381,10,17.381S17.383,14.07,17.383,10"></path>
+        </svg>
+    </a>
+
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path>
+                </svg>
+            </a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                <a class="dropback-icon button" id="btn-dropback">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round">
+                        <path fill="currentColor" d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"></path>
+                    </svg>
+                </a>
+                
+                    <a href="/" class="dropdown-menu button">
+                        首页
+                    </a>
+                
+                    <a href="/tags/" class="dropdown-menu button">
+                        标签
+                    </a>
+                
+                    <a href="/archives/" class="dropdown-menu button">
+                        归档
+                    </a>
+                
+                    <a href="/pictures/" class="dropdown-menu button">
+                        画廊
+                    </a>
+                
+                    <a href="/pages/" class="dropdown-menu button">
+                        Page
+                    </a>
+                
+            </div>
+            <script>
+                document.getElementById('btn-dropdown').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    requestAnimationFrame(() => {
+                        dd.style.display = 'flex';
+                        requestAnimationFrame(() => {
+                            dd.style.transform = 'translateY(0)';
+                            dd.style.opacity = '1';
+                        });
+                    });
+                });
+                document.getElementById('btn-dropback').addEventListener('click', () => {
+                    const dd = document.getElementById('dropdown-menus');
+                    dd.style.transform = 'translateY(2.25rem)';                    
+                    dd.style.opacity = '0';
+                    setTimeout(() => {dd.style.display = 'none';}, 350);
+                });
+            </script>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+<div class="post-title">
+    <h1 class="post-title__text">
+        开始学习HTML
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-15
+</a>
+        
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <div class="post__with-side">
+        <aside class="post-side">
+            <div class="post-side__toc">
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFHTML"><span class="toc-text">什么是HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A8%E6%9E%90%E4%B8%80%E4%B8%AAHTML%E5%85%83%E7%B4%A0"><span class="toc-text">刨析一个HTML元素</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B5%8C%E5%A5%97%E5%85%83%E7%B4%A0"><span class="toc-text">嵌套元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E5%92%8C%E5%86%85%E8%81%94%E5%85%83%E7%B4%A0"><span class="toc-text">块级元素和内联元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A9%BA%E5%85%83%E7%B4%A0"><span class="toc-text">空元素</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-text">属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E5%B1%9E%E6%80%A7"><span class="toc-text">布尔属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9C%81%E7%95%A5%E5%8C%85%E5%9B%B4%E5%B1%9E%E6%80%A7%E5%80%BC%E7%9A%84%E5%BC%95%E5%8F%B7"><span class="toc-text">省略包围属性值的引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%BC%95%E5%8F%B7%E6%88%96%E8%80%85%E5%8F%8C%E5%BC%95%E5%8F%B7%EF%BC%9F"><span class="toc-text">单引号或者双引号？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A8%E6%9E%90HTML%E6%96%87%E6%A1%A3"><span class="toc-text">刨析HTML文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%EF%BC%9A%E5%9C%A8HTML%E4%B8%AD%E5%8C%85%E5%90%AB%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6"><span class="toc-text">实体引用：在HTML中包含特殊字符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HTML%E6%B3%A8%E9%87%8A"><span class="toc-text">HTML注释</span></a></li></ol>
+            </div>
+        </aside>
+        <article class="post content-card">
+            <div class="post__header">
+                
+    
+        <div class="post-thumbnail lazyload" data-bg="/images/html_index.jpg"></div>
+    
+ 
+                
+            </div>
+            <div class="post__content">
+                <h3 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML"></a>什么是HTML</h3><p>HTML不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。它由一系列元素组成，这些元素可以包围不同部分的内容，使其以某种方式呈现或者工作。</p>
+<blockquote>
+<p>HTML标签不区分大小写。不过，从一致性、可读性方面来说，最好仅使用小写字母。</p>
+</blockquote>
+<h3 id="刨析一个HTML元素"><a href="#刨析一个HTML元素" class="headerlink" title="刨析一个HTML元素"></a>刨析一个HTML元素</h3><p><img src="/images/html/element.png" class="lazyload" data-srcset="/images/html/element.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg=="></p>
+<p>这个元素主要部分有：</p>
+<ol>
+<li>开始标签：包含元素的名称（本例为 p），被左、右角括号所包围。表示元素从这里开始或者开始起作用 —— 在本例中即段落由此开始。</li>
+<li>结束标签：与开始标签相似，只是其在元素名之前包含了一个斜杠。这表示着元素的结尾 —— 在本例中即段落在此结束。</li>
+<li>内容：元素的内容，本例中就是所输入的文本本身。</li>
+<li>元素：开始标签、结束标签与内容相结合，便是一个完整的元素。</li>
+</ol>
+<h4 id="嵌套元素"><a href="#嵌套元素" class="headerlink" title="嵌套元素"></a>嵌套元素</h4><p>元素可放入其他元素中——这被称作嵌套。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>我的猫咪脾气<span class="tag">&lt;<span class="name">strong</span>&gt;</span>爆<span class="tag">&lt;/<span class="name">strong</span>&gt;</span>:)<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="块级元素和内联元素"><a href="#块级元素和内联元素" class="headerlink" title="块级元素和内联元素"></a>块级元素和内联元素</h4><ul>
+<li>块级元素在页面中以块的形式展现——相对于其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现。块级元素通常用于展示页面上结构化的内容。一个以block形式展现的块级元素不会被嵌套进内联元素中，但可以嵌套在其它块级元素中。</li>
+<li>内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行：它通常出现在一堆文字之间。</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">em</span>&gt;</span>第一<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>第二<span class="tag">&lt;/<span class="name">em</span>&gt;</span><span class="tag">&lt;<span class="name">em</span>&gt;</span>第三<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>第四<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>第五<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>第六<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>HTML5重新定义了元素的类别：见 <a target="_blank" rel="noopener" href="https://html.spec.whatwg.org/multipage/indices.html#element-content-categories">元素内容分类</a>(<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/HTML/Content_categories">译文</a>)。尽管这些新的定义更精确，但却比上述的 “块级元素” 和 “内联元素” 更难理解，因此在之后的讨论中仍使用旧的定义。</p>
+</blockquote>
+<h4 id="空元素"><a href="#空元素" class="headerlink" title="空元素"></a>空元素</h4><p>不是所有元素都拥有开始标签，内容，结束标签。一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p><img src="/images/html/attribute.png" class="lazyload" data-srcset="/images/html/attribute.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg=="></p>
+<p>属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个class属性给元素赋了一个识别的名字（id），这个名字此后可以被用来识别此元素的样式信息和其他信息。</p>
+<p>一个属性必须包含如下内容：</p>
+<ol>
+<li>一个空格，在属性和元素名称之间。(如果已经有一个或多个属性，就与前一个属性之间有一个空格。)</li>
+<li>属性名称，后面跟着一个等于号。</li>
+<li>一个属性值，由一对引号“ ”引起来。</li>
+</ol>
+<h4 id="布尔属性"><a href="#布尔属性" class="headerlink" title="布尔属性"></a>布尔属性</h4><p>有些没有值的属性，但它是合法的。这些属性被称为布尔属性，他们只能有跟它的属性名一样的属性值。例如<code>disabled</code> 属性，他们可以标记表单输入使之变为不可用(变灰色)，此时用户不能向他们输入任何数据。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="省略包围属性值的引号"><a href="#省略包围属性值的引号" class="headerlink" title="省略包围属性值的引号"></a>省略包围属性值的引号</h4><p>建议始终添加引号——这样可以避免很多问题，并且使代码更易读。</p>
+<h4 id="单引号或者双引号？"><a href="#单引号或者双引号？" class="headerlink" title="单引号或者双引号？"></a>单引号或者双引号？</h4><p>单引号和双引号都可使用。但应该注意单引号和双引号不能在一个属性值里面混用。在一个HTML中已使用一种引号，你可以在此引号中嵌套另外一种引号。如果想将引号当作文本显示在html中，你就必须使用<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Getting_started#%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%EF%BC%9A_%E5%9C%A8HTML%E4%B8%AD%E5%8C%85%E5%90%AB%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6">实体引用</a>。</p>
+<h3 id="刨析HTML文档"><a href="#刨析HTML文档" class="headerlink" title="刨析HTML文档"></a>刨析HTML文档</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>我的测试站点<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是我的页面<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>分析如下：</p>
+<ol>
+<li><code>&lt;!DOCTYPE html&gt;</code>: 声明文档类型。</li>
+<li><code>&lt;html&gt;&lt;/html&gt;</code>: <code>&lt;html&gt;</code> 元素。这个元素包裹了整个完整的页面，是一个根元素。</li>
+<li><code>&lt;head&gt;&lt;/head&gt;</code>: <code>&lt;head&gt;</code>元素。这个元素是一个容器，它包含了所有你想包含在HTML页面中但不想在HTML页面中显示的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述，CSS样式，字符集声明等等。</li>
+<li><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>: 这个元素设置文档使用utf-8字符集编码，utf-8字符集包含了人类大部分的文字。基本上他能识别你放上去的所有文本内容。毫无疑问要使用它，并且它能在以后避免很多其他问题。</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>: 设置页面标题，出现在浏览器标签上，当你标记/收藏页面时它可用来描述页面。</li>
+<li><code>&lt;body&gt;&lt;/body&gt;</code>: <code>&lt;body&gt;</code>元素。 包含了你访问页面时所有显示在页面上的内容，文本，图片，音频，游戏等等。</li>
+</ol>
+<h3 id="实体引用：在HTML中包含特殊字符"><a href="#实体引用：在HTML中包含特殊字符" class="headerlink" title="实体引用：在HTML中包含特殊字符"></a>实体引用：在HTML中包含特殊字符</h3><p>须使用字符引用 —— 表示字符的特殊编码, 它们可以在那些情况下使用. 每个字符引用以符号&amp;开始, 以分号(;)结束。</p>
+<table>
+<thead>
+<tr>
+<th align="left">原义字符</th>
+<th align="left">等价字符引用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&lt;</td>
+<td align="left">&amp;lt；</td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">&amp;gt；</td>
+</tr>
+<tr>
+<td align="left">“</td>
+<td align="left">&amp;quot；</td>
+</tr>
+<tr>
+<td align="left">‘</td>
+<td align="left">&amp;apos；</td>
+</tr>
+<tr>
+<td align="left">&amp;</td>
+<td align="left">&amp;amp；</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>维基百科上有一个包含所有可用HTML字符实体引用的列表：<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references">XML和HTML字符实体引用列表</a>。</p>
+</blockquote>
+<h3 id="HTML注释"><a href="#HTML注释" class="headerlink" title="HTML注释"></a>HTML注释</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- &lt;p&gt;我在注释内！&lt;/p&gt; --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+            </div>
+            
+    <div class="post__license">
+        <p>
+            <strong>Author: </strong>叶苏雄
+        </p>
+        <p>
+            <strong>
+                Permalink: 
+            </strong>
+            <a href="https://yesux.github.io/2020/09/15/%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0HTML/">https://yesux.github.io/2020/09/15/%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0HTML/</a>
+        </p>
+        
+            <strong>
+                <p>文章默认使用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议进行许可，使用时请注意遵守协议。</p>
+
+            </strong>
+        
+    </div>
+ 
+            <div class="post-footer__meta">
+    <p>
+        updated at 2020-09-15
+    </p>
+</div> 
+            <div class="post-meta__cats">
+    
+    
+        <a href="/tags/HTML/" class="post-tags__link button"># HTML</a>
+    
+</div> 
+        </article>
+        
+    </div>
+
+
+</main>
+
+            <footer class="footer">
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright&nbsp;©&nbsp;2020&nbsp;<a href="/">博客</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+        
+    <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.1.0/dist/lazyload.min.js"></script>
+    <script>
+        window.lazyLoadOptions = {
+            elements_selector: ".lazyload",
+            threshold: 0
+        };
+    </script>
+ 
+
+ 
+
+ 
+
+ 
+
+  
+
+
+
+ 
+
+
+    
+
+
+
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.css">
+
+    
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.4.1/dist/jquery.fancybox.min.js"></script>
+
+    <script>
+        let lazyloadT = Boolean('[object Object]'),
+            auto_fancybox = Boolean('false')
+        if (auto_fancybox) {
+            $(".post__content").find('img').each(function () {
+                var element = document.createElement("a");
+                $(element).attr("data-fancybox", "gallery");
+                $(element).attr("href", $(this).attr("src"));
+                if (lazyloadT) {
+                    $(element).attr("href", $(this).attr("data-srcset"));
+                }
+                $(this).wrap(element);
+            });
+        } else {
+            $(".post__content").find("fancybox").find('img').each(function () {
+                var element = document.createElement("a");
+                $(element).attr("data-fancybox", "gallery");
+                $(element).attr("href", $(this).attr("src"));
+                if (lazyloadT) {
+                    $(element).attr("href", $(this).attr("data-srcset"));
+                }
+                $(this).wrap(element);
+            });
+        }
+    </script>
+ 
+
+ 
+    <script defer src="/js/b2t.js"></script>
+
+
+
+
+
+
+
+    </body>
+</html>
