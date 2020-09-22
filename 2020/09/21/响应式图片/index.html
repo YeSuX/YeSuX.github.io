@@ -21,7 +21,7 @@
     <!-- meta -->
 
 
-<title>从对象到iframe | 博客</title>
+<title>响应式图片 | 博客</title>
 
 
     <meta name="keywords" content="HTML">
@@ -29,20 +29,20 @@
 
     <!-- OpenGraph -->
  
-    <meta name="description" content="&lt;iframe&gt;用于嵌入其他网页，&lt;embed&gt; &lt;object&gt;允许嵌入PDF、SVG。 Iframe详解&lt;iframe&gt;元素允许将其他Web文档嵌入当前文档中。 &lt;iframe&gt;存在严重安全隐患，但不意味不能使用。 1234567&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en">
+    <meta name="description" content="响应式图片，在不同屏幕尺寸和分辨率设备可良好工作。 为什么要用自适应图片？电脑与手机屏幕尺寸转换，图片需自适应。 怎样创建自适应的图片？CSS比HTML更好的响应式设计工具。 分辨率切换：不同的尺寸1234567&lt;img srcset&#x3D;&quot;elva-fairy-320w.jpg 320w,             elva-fairy-480w.jpg 480w,">
 <meta property="og:type" content="article">
-<meta property="og:title" content="从对象到iframe">
-<meta property="og:url" content="https://yesux.github.io/2020/09/19/%E4%BB%8E%E5%AF%B9%E8%B1%A1%E5%88%B0ireame/index.html">
+<meta property="og:title" content="响应式图片">
+<meta property="og:url" content="https://yesux.github.io/2020/09/21/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%9B%BE%E7%89%87/index.html">
 <meta property="og:site_name" content="博客">
-<meta property="og:description" content="&lt;iframe&gt;用于嵌入其他网页，&lt;embed&gt; &lt;object&gt;允许嵌入PDF、SVG。 Iframe详解&lt;iframe&gt;元素允许将其他Web文档嵌入当前文档中。 &lt;iframe&gt;存在严重安全隐患，但不意味不能使用。 1234567&lt;iframe src&#x3D;&quot;https:&#x2F;&#x2F;developer.mozilla.org&#x2F;en">
+<meta property="og:description" content="响应式图片，在不同屏幕尺寸和分辨率设备可良好工作。 为什么要用自适应图片？电脑与手机屏幕尺寸转换，图片需自适应。 怎样创建自适应的图片？CSS比HTML更好的响应式设计工具。 分辨率切换：不同的尺寸1234567&lt;img srcset&#x3D;&quot;elva-fairy-320w.jpg 320w,             elva-fairy-480w.jpg 480w,">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://yesux.github.io/images/html_4_1.jpg">
-<meta property="article:published_time" content="2020-09-19T03:30:41.000Z">
-<meta property="article:modified_time" content="2020-09-19T08:55:36.761Z">
+<meta property="og:image" content="https://yesux.github.io/images/html_4_3.jpg">
+<meta property="article:published_time" content="2020-09-21T09:49:31.000Z">
+<meta property="article:modified_time" content="2020-09-21T11:13:44.049Z">
 <meta property="article:author" content="叶苏雄">
 <meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yesux.github.io/images/html_4_1.jpg">
+<meta name="twitter:image" content="https://yesux.github.io/images/html_4_3.jpg">
 
 
     
@@ -194,11 +194,11 @@
     
 <div class="post-title">
     <h1 class="post-title__text">
-        从对象到iframe
+        响应式图片
     </h1>
     <div class="post-title__meta">
         <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-19
+    2020-09-21
 </a>
         
  
@@ -217,34 +217,55 @@
     <div class="post__with-side">
         <aside class="post-side">
             <div class="post-side__toc">
-                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Iframe%E8%AF%A6%E8%A7%A3"><span class="toc-text">Iframe详解</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E7%94%A8%E8%87%AA%E9%80%82%E5%BA%94%E5%9B%BE%E7%89%87%EF%BC%9F"><span class="toc-text">为什么要用自适应图片？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%8E%E6%A0%B7%E5%88%9B%E5%BB%BA%E8%87%AA%E9%80%82%E5%BA%94%E7%9A%84%E5%9B%BE%E7%89%87%EF%BC%9F"><span class="toc-text">怎样创建自适应的图片？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87%E5%88%87%E6%8D%A2%EF%BC%9A%E4%B8%8D%E5%90%8C%E7%9A%84%E5%B0%BA%E5%AF%B8"><span class="toc-text">分辨率切换：不同的尺寸</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E8%BE%A8%E7%8E%87%E5%88%87%E6%8D%A2%EF%BC%9A%E7%9B%B8%E5%90%8C%E5%B0%BA%E5%AF%B8%EF%BC%8C%E4%B8%8D%E5%90%8C%E5%88%86%E8%BE%A8%E7%8E%87"><span class="toc-text">分辨率切换：相同尺寸，不同分辨率</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BE%8E%E6%9C%AF%E8%AE%BE%E8%AE%A1"><span class="toc-text">美术设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8CSS%E6%88%96JavaScript%E6%9D%A5%E5%81%9A%E8%BF%99%E4%B8%80%E6%95%88%E6%9E%9C%EF%BC%9F"><span class="toc-text">为什么我们不能使用CSS或JavaScript来做这一效果？</span></a></li></ol></li></ol>
             </div>
         </aside>
         <article class="post content-card">
             <div class="post__header">
                 
     
-        <div class="post-thumbnail lazyload" data-bg="/images/html_4_1.jpg"></div>
+        <div class="post-thumbnail lazyload" data-bg="/images/html_4_3.jpg"></div>
     
  
                 
             </div>
             <div class="post__content">
-                <p><code>&lt;iframe&gt;</code>用于嵌入其他网页，<code>&lt;embed&gt;</code> <code>&lt;object&gt;</code>允许嵌入PDF、SVG。</p>
-<h3 id="Iframe详解"><a href="#Iframe详解" class="headerlink" title="Iframe详解"></a>Iframe详解</h3><p><code>&lt;iframe&gt;</code>元素允许将其他Web文档嵌入当前文档中。</p>
-<p><code>&lt;iframe&gt;</code>存在严重安全隐患，但不意味不能使用。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">&quot;https://developer.mozilla.org/en-US/docs/Glossary&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">width</span>=<span class="string">&quot;100%&quot;</span> <span class="attr">height</span>=<span class="string">&quot;500&quot;</span> <span class="attr">frameborder</span>=<span class="string">&quot;0&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">allowfullscreen</span> <span class="attr">sandbox</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span> <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://developer.mozilla.org/en-US/docs/Glossary&quot;</span>&gt;</span></span><br><span class="line">    Fallback link for browsers that don&#x27;t support iframes</span><br><span class="line">  <span class="tag">&lt;/<span class="name">a</span>&gt;</span> <span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
+                <p>响应式图片，在不同屏幕尺寸和分辨率设备可良好工作。</p>
+<h3 id="为什么要用自适应图片？"><a href="#为什么要用自适应图片？" class="headerlink" title="为什么要用自适应图片？"></a>为什么要用自适应图片？</h3><p>电脑与手机屏幕尺寸转换，图片需自适应。</p>
+<h3 id="怎样创建自适应的图片？"><a href="#怎样创建自适应的图片？" class="headerlink" title="怎样创建自适应的图片？"></a>怎样创建自适应的图片？</h3><p>CSS比HTML更好的响应式设计工具。</p>
+<h4 id="分辨率切换：不同的尺寸"><a href="#分辨率切换：不同的尺寸" class="headerlink" title="分辨率切换：不同的尺寸"></a>分辨率切换：不同的尺寸</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg 320w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 480w,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-800w.jpg 800w&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">sizes</span>=<span class="string">&quot;(max-width: 320px) 280px,</span></span></span><br><span class="line"><span class="tag"><span class="string">            (max-width: 480px) 440px,</span></span></span><br><span class="line"><span class="tag"><span class="string">            800px&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">src</span>=<span class="string">&quot;elva-fairy-800w.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Elva dressed as a fairy&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><code>allowfullscreen</code></p>
-<p>如果设置，<code>&lt;iframe&gt;</code>则可以通过全屏API设置为全屏模式。</p>
-<p><code>frameborder</code></p>
-<p>如果设置为1，浏览器在此框架和其他框架之间绘制边框，默认。0删除边框，不推荐，因为CSS可更好实现，<code>border: none;</code></p>
-<p><code>src</code></p>
-<p>指向嵌入文档的URL路径。</p>
-<p><code>width</code>和<code>height</code></p>
-<p>指定iframe的宽度和高度。</p>
-<p><strong>备选内容</strong></p>
-<p><code>sandbox</code></p>
+<p><code>srcset</code>定义允许浏览器选择的图像集，以及每个图像的大小。</p>
+<ol>
+<li>文件名</li>
+<li>空格</li>
+<li>图像固有宽度</li>
+</ol>
+<p><code>sizes</code>定义媒体条件，若为真，设置尺寸。</p>
+<ol>
+<li>媒体条件</li>
+<li>空格</li>
+<li>当媒体条件为真，图像填充槽的宽度</li>
+</ol>
+<p>浏览器操作</p>
+<ol>
+<li>查看设备宽度</li>
+<li>检查<code>sizes</code>列表中哪个媒体条件是第一个为真</li>
+<li>查看槽大小</li>
+<li>加载<code>srcset</code>列表中最接近所选槽大小的图像</li>
+</ol>
+<h4 id="分辨率切换：相同尺寸，不同分辨率"><a href="#分辨率切换：相同尺寸，不同分辨率" class="headerlink" title="分辨率切换：相同尺寸，不同分辨率"></a>分辨率切换：相同尺寸，不同分辨率</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-fairy-320w.jpg,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-480w.jpg 1.5x,</span></span></span><br><span class="line"><span class="tag"><span class="string">             elva-fairy-640w.jpg 2x&quot;</span></span></span><br><span class="line"><span class="tag">     <span class="attr">src</span>=<span class="string">&quot;elva-fairy-640w.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Elva dressed as a fairy&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>1x为默认值，不需写。2x，两个或更多的设备像素表示一个CSS像素。</p>
+<h4 id="美术设计"><a href="#美术设计" class="headerlink" title="美术设计"></a>美术设计</h4><p> <a target="_blank" rel="noopener" href="http://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html">not-responsive.html</a> </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">picture</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">media</span>=<span class="string">&quot;(max-width: 799px)&quot;</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-480w-close-portrait.jpg&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">source</span> <span class="attr">media</span>=<span class="string">&quot;(min-width: 800px)&quot;</span> <span class="attr">srcset</span>=<span class="string">&quot;elva-800w.jpg&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;elva-800w.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;Chris standing up holding his daughter Elva&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">picture</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>&lt;sourse&gt;</code>元素包含一个<code>media</code>属性，定义媒体条件，若为真，设置尺寸。</li>
+<li><code>srcset</code>显示图片路径，<code>srcset</code>属性同上。</li>
+<li>在任何情况下，你都必须在 <code>&lt;/picture&gt;</code>之前正确提供一个<code>&lt;img&gt;</code>元素以及它的<code>src</code>和<code>alt</code>属性，否则不会有图片显示。当媒体条件都不返回真的时候（你可以在这个例子中删除第二个<code>&lt;source&gt;</code> 元素），它会提供图片；如果浏览器不支持 <code>&lt;picture&gt;</code>元素时，它可以作为后备方案。</li>
+</ul>
+<h4 id="为什么我们不能使用CSS或JavaScript来做这一效果？"><a href="#为什么我们不能使用CSS或JavaScript来做这一效果？" class="headerlink" title="为什么我们不能使用CSS或JavaScript来做这一效果？"></a>为什么我们不能使用CSS或JavaScript来做这一效果？</h4><p>会将原始图像和小图像共同加载，耗费资源，无意义。</p>
 
             </div>
             
@@ -256,7 +277,7 @@
             <strong>
                 Permalink: 
             </strong>
-            <a href="https://yesux.github.io/2020/09/19/%E4%BB%8E%E5%AF%B9%E8%B1%A1%E5%88%B0ireame/">https://yesux.github.io/2020/09/19/%E4%BB%8E%E5%AF%B9%E8%B1%A1%E5%88%B0ireame/</a>
+            <a href="https://yesux.github.io/2020/09/21/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%9B%BE%E7%89%87/">https://yesux.github.io/2020/09/21/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%9B%BE%E7%89%87/</a>
         </p>
         
             <strong>
@@ -268,7 +289,7 @@
  
             <div class="post-footer__meta">
     <p>
-        updated at 2020-09-19
+        updated at 2020-09-21
     </p>
 </div> 
             <div class="post-meta__cats">

@@ -21,19 +21,28 @@
     <!-- meta -->
 
 
-<title>Archive: 2020 | 博客</title>
+<title>HTML表格基础 | 博客</title>
 
+
+    <meta name="keywords" content="HTML">
 
 
     <!-- OpenGraph -->
  
-    <meta property="og:type" content="website">
-<meta property="og:title" content="博客">
-<meta property="og:url" content="https://yesux.github.io/archives/2020/page/2/index.html">
+    <meta name="description" content="本文介绍HTML表格，行，单元格等。 什么是表格？ like this。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML表格基础">
+<meta property="og:url" content="https://yesux.github.io/2020/09/22/HTML%E8%A1%A8%E6%A0%BC%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="博客">
+<meta property="og:description" content="本文介绍HTML表格，行，单元格等。 什么是表格？ like this。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://yesux.github.io/images/html_5_1.jpg">
+<meta property="article:published_time" content="2020-09-22T11:10:05.000Z">
+<meta property="article:modified_time" content="2020-09-22T11:19:15.738Z">
 <meta property="article:author" content="叶苏雄">
+<meta property="article:tag" content="HTML">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://yesux.github.io/images/html_5_1.jpg">
 
 
     
@@ -50,6 +59,13 @@
 
 
     
+    
+        <link rel="stylesheet" id="hl-default-theme" href="/css/highlight/default.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')===-1)this.media='all'">
+        
+            <link rel="stylesheet" id="hl-dark-theme" href="/css/highlight/dark.css" media="none" onload="if(getComputedStyle(document.documentElement).getPropertyValue('--color-mode').indexOf('dark')!==-1)this.media='all'">
+        
+    
+
     
     
 
@@ -174,209 +190,86 @@
 </header>
 
 
-    <div class="cover">
-        <div class="cover__logo">
-            
-                <img no-lazy alt="author Image" src="/futuristic.png">
-            
-        </div>
+            <main class="main">
+    
+<div class="post-title">
+    <h1 class="post-title__text">
+        HTML表格基础
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2020/09/" class="post-meta__date button">
+    2020-09-22
+</a>
         
-            <div class="cover__intro">
-                <p>Hi, nice to meet you!</p>
  
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+    <div class="post__with-side">
+        <aside class="post-side">
+            <div class="post-side__toc">
+                <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E8%A1%A8%E6%A0%BC%EF%BC%9F"><span class="toc-text">什么是表格？</span></a></li></ol>
             </div>
+        </aside>
+        <article class="post content-card">
+            <div class="post__header">
+                
+    
+        <div class="post-thumbnail lazyload" data-bg="/images/html_5_1.jpg"></div>
+    
+ 
+                
+            </div>
+            <div class="post__content">
+                <p>本文介绍HTML表格，行，单元格等。</p>
+<h2 id="什么是表格？"><a href="#什么是表格？" class="headerlink" title="什么是表格？"></a>什么是表格？</h2><p><img src="/images/numbers-table.png" class="lazyload" data-srcset="/images/numbers-table.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAABlBMVEXMzMyWlpYU2uzLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNgAAAAAgAB9HFkpgAAAABJRU5ErkJggg=="></p>
+<p>like this。</p>
+
+            </div>
+            
+    <div class="post__license">
+        <p>
+            <strong>Author: </strong>叶苏雄
+        </p>
+        <p>
+            <strong>
+                Permalink: 
+            </strong>
+            <a href="https://yesux.github.io/2020/09/22/HTML%E8%A1%A8%E6%A0%BC%E5%9F%BA%E7%A1%80/">https://yesux.github.io/2020/09/22/HTML%E8%A1%A8%E6%A0%BC%E5%9F%BA%E7%A1%80/</a>
+        </p>
+        
+            <strong>
+                <p>文章默认使用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a> 协议进行许可，使用时请注意遵守协议。</p>
+
+            </strong>
         
     </div>
-
-            
-<main class='main'>
-    
-		
-    <div class="posts">
-        
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header">
-    
-    
-        <div class="post-thumbnail lazyload" data-bg="/images/html_1.jpg"></div>
-    
  
-</div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        head标签里有什么？
-    </h2>
+            <div class="post-footer__meta">
+    <p>
+        updated at 2020-09-22
+    </p>
+</div> 
+            <div class="post-meta__cats">
     
-        <p>
-            在页面加载完成的时候，标签head里的内容，是不会在页面中显示出来的。它包含了像页面的标题，CSS，指向自定义图标的链接和其他的元数据(描述HTML的数据，比如，作者，和描述文档的重要关键词)。
-
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
     
         <a href="/tags/HTML/" class="post-tags__link button"># HTML</a>
     
 </div> 
-<a href="/2020/09/15/head-%E6%A0%87%E7%AD%BE%E9%87%8C%E6%9C%89%E4%BB%80%E4%B9%88%EF%BC%9F/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header">
-    
-    
-        <div class="post-thumbnail lazyload" data-bg="/images/html_index.jpg"></div>
-    
- 
-</div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        开始学习HTML
-    </h2>
-    
-        <p>
-            什么是HTMLHTML不是一门编程语言，而是一种用来告知浏览器如何组织页面的标记语言。它由一系列元素组成，这些元素可以包围不同部...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-15
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/HTML/" class="post-tags__link button"># HTML</a>
-    
-</div> 
-<a href="/2020/09/15/%E5%BC%80%E5%A7%8B%E5%AD%A6%E4%B9%A0HTML/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header">
-    
-    
-        <div class="post-thumbnail lazyload" data-bg="/images/Internet_1.jpg"></div>
-    
- 
-</div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        How does the internet work
-    </h2>
-    
-        <p>
-            如今，Internet爆发增长，每个人都躲不过www&amp;com轰炸，我们需了解它才能有效使用它。
-本文介绍了Internet的基本结构和技术。虽未深入，但基本涵盖Internet各领域。
-...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-14
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Internet/" class="post-tags__link button"># Internet</a>
-    
-</div> 
-<a href="/2020/09/14/How-does-the-internet-work/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header">
-    
-    
-        <div class="post-thumbnail lazyload" data-bg="/images/frontend_index.jpg"></div>
-    
- 
-</div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        my Front-end route
-    </h2>
-    
-        <p>
-            
-
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-14
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-        <a href="/tags/Front-end/" class="post-tags__link button"># Front-end</a>
-    
-</div> 
-<a href="/2020/09/14/my-Front-end-route/" class="post-entry__link">Link</a>
-                </div>
-            
-                <div class='post-entry content-card'>
-                    <div class="post-entry__header">
-     
-</div>
-<div class="post-entry__content">
-    <h2 class="post-entry__title">
-        Hello World
-    </h2>
-    
-        <p>
-            Welcome to Hexo! This is your very first post. Check documentation for more i...
-        </p>
-    
-</div>
-<div class="post-entry__meta">
-    <a href="/archives/2020/09/" class="post-meta__date button">
-    2020-09-12
-</a>
-    
- 
-</div>
-<div class="post-entry__tags">
-    
-</div> 
-<a href="/2020/09/12/hello-world/" class="post-entry__link">Link</a>
-                </div>
-            
+        </article>
         
     </div>
-    
-        
-            <nav role="navigation" aria-label="Pagination Navigation">
-                
-                    <div class="pagination_prev">
-                        <a href="/archives/2020/" class="button">
-                            &lt;&nbsp;Previous
-                        </a>
-                    </div>
-                
-                
-            </nav>
-        
-    
 
 
-	
 </main>
 
             <footer class="footer">
