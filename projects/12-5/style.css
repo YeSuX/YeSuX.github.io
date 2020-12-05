@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    margin: 4rem;
+    font-family: sans-serif;
+}
+
+@keyframes around {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pivot {
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+.item {
+    width: 4rem;
+    height: 4rem;
+    background: #1a1a1c;
+    border-radius: 0.5rem;
+}
+
+.lazy {
+    animation: pivot 0.25s infinite;
+}
+
+.wigglearound {
+    width: 4rem;
+    transform-origin: calc(50% - 0.05rem);
+    animation: around 0.3s linear infinite;
+}
+
+.wigglecontainer {
+    animation: around 0.3s linear infinite reverse;
+}
+
+.wigglecontainer .item {
+    animation: pivot 0.25s infinite;
+}
