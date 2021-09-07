@@ -2,4 +2,4 @@
 
 目录
 
-[vue2](./vue2/start.md)
+[vue2](./vue2/)
