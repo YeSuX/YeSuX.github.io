@@ -1,5 +1,6 @@
 export const themeData = {
-  "logo": "https://vuejs.org/images/logo.png",
+  "logo": "https://s3.bmp.ovh/imgs/2021/09/7e9b736246fa3521.png",
+  "logoDark": "https://s3.bmp.ovh/imgs/2021/09/53653599a08c9994.png",
   "repo": "https://github.com/YeSuX",
   "navbar": [
     {
@@ -47,17 +48,4 @@ export const themeData = {
   "openInNewWindow": "open in new window",
   "toggleDarkMode": "toggle dark mode",
   "toggleSidebar": "toggle sidebar"
-}
-
-if (import.meta.webpackHot) {
-  import.meta.webpackHot.accept()
-  if (__VUE_HMR_RUNTIME__.updateThemeData) {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  }
-}
-
-if (import.meta.hot) {
-  import.meta.hot.accept(({ themeData }) => {
-    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
-  })
 }
