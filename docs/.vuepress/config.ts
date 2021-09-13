@@ -27,6 +27,10 @@ export default defineUserConfig<DefaultThemeOptions>({
             link:'/life/photos/'
           }
         ]
+      },
+      {
+        text:'项目',
+        link:'/projects/'
       }
     ]
   },

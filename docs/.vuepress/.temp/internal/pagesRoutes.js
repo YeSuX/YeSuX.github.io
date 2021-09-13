@@ -3,6 +3,7 @@ import { Vuepress } from '@vuepress/client/lib/components/Vuepress'
 const routeItems = [
   ["v-8daa1a0e","/","一级标题",["/index.html","/README.md"]],
   ["v-14e6315a","/life/","mylife",["/life/index.html","/life/README.md"]],
+  ["v-55c119db","/projects/blog.html","blog Page",["/projects/blog","/projects/blog.md"]],
   ["v-744e35e2","/vue/","vue",["/vue/index.html","/vue/README.md"]],
   ["v-a96f4ab4","/life/diary/","backToTop 按钮测试",["/life/diary/index.html","/life/diary/README.md"]],
   ["v-379efd34","/life/photos/","photos",["/life/photos/index.html","/life/photos/README.md"]],

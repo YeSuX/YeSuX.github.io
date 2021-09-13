@@ -20,6 +20,10 @@ export const themeData = {
           "link": "/life/photos/"
         }
       ]
+    },
+    {
+      "text": "项目",
+      "link": "/projects/"
     }
   ],
   "locales": {

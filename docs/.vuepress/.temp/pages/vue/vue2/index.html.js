@@ -8,8 +8,14 @@ export const data = {
   "headers": [],
   "filePathRelative": "vue/vue2/README.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1631005084000,
+    "contributors": [
+      {
+        "name": "YeSuX",
+        "email": "351490949@qq.com",
+        "commits": 1
+      }
+    ]
   }
 }
 
