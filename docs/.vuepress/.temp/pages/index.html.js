@@ -1,35 +1,16 @@
 export const data = {
   "key": "v-8daa1a0e",
   "path": "/",
-  "title": "一级标题",
+  "title": "我是首页",
   "lang": "zh-CN",
   "frontmatter": {},
   "excerpt": "",
   "headers": [
     {
       "level": 2,
-      "title": "二级标题",
-      "slug": "二级标题",
+      "title": "待开发",
+      "slug": "待开发",
       "children": []
-    },
-    {
-      "level": 2,
-      "title": "二级标题",
-      "slug": "二级标题-1",
-      "children": [
-        {
-          "level": 3,
-          "title": "三级标题",
-          "slug": "三级标题",
-          "children": []
-        },
-        {
-          "level": 3,
-          "title": "三级标题",
-          "slug": "三级标题-1",
-          "children": []
-        }
-      ]
     }
   ],
   "filePathRelative": "README.md",
