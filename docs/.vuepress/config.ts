@@ -11,8 +11,8 @@ export default defineUserConfig<DefaultThemeOptions>({
     repo:'https://github.com/YeSuX',
     navbar:[
       {
-        text:'Vue',
-        link:'/vue/'
+        text:'Note',
+        link:'/note/'
       },
       {
         text:'生活',

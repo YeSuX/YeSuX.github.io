@@ -46,8 +46,14 @@ export const data = {
   ],
   "filePathRelative": "vue/浅淡vue2与vue3响应式原理.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1632900758000,
+    "contributors": [
+      {
+        "name": "YeSuX",
+        "email": "351490949@qq.com",
+        "commits": 1
+      }
+    ]
   }
 }
 
