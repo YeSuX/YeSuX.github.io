@@ -24,6 +24,10 @@ export const themeData = {
     {
       "text": "项目",
       "link": "/projects/"
+    },
+    {
+      "text": "周记",
+      "link": "/week/"
     }
   ],
   "locales": {

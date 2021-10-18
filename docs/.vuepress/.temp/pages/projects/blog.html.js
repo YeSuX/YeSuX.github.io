@@ -8,8 +8,14 @@ export const data = {
   "headers": [],
   "filePathRelative": "projects/blog.md",
   "git": {
-    "updatedTime": null,
-    "contributors": []
+    "updatedTime": 1631543847000,
+    "contributors": [
+      {
+        "name": "叶苏雄",
+        "email": "xiesuxiong@xiesuxiongdeMacBook-Pro.local",
+        "commits": 1
+      }
+    ]
   }
 }
 
