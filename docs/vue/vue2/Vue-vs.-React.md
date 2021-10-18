@@ -1,3 +1,0 @@
-# Vue vs. React
-
-content

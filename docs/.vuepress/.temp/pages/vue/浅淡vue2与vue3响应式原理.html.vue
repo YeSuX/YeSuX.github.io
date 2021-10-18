@@ -1,0 +1,114 @@
+<template><h1 id="浅淡vue2与vue3响应式原理" tabindex="-1"><a class="header-anchor" href="#浅淡vue2与vue3响应式原理" aria-hidden="true">#</a> 浅淡vue2与vue3响应式原理</h1>
+<p>其实在vue官方文档中已经讲得十分明晰，我简单将其进行概括一下。</p>
+<h2 id="什么是响应式" tabindex="-1"><a class="header-anchor" href="#什么是响应式" aria-hidden="true">#</a> 什么是响应式？</h2>
+<p>响应性是一种允许我们以声明式的方式去适应变化的编程范例。举例，A映射为B，A发生变化时，B根据映射关系产生相应的改变；同时，B发生变化时，A也会发生变化。</p>
+<p>成为响应式需要解决三个问题：</p>
+<ol>
+<li><strong>当一个值被读取时进行追踪</strong>。</li>
+<li><strong>当某个值改变时进行检测</strong>。</li>
+<li><strong>重新运行代码来读取原始值</strong>。</li>
+</ol>
+<h2 id="vue-如何知道哪些代码在执行" tabindex="-1"><a class="header-anchor" href="#vue-如何知道哪些代码在执行" aria-hidden="true">#</a> Vue 如何知道哪些代码在执行</h2>
+<p>Vue 通过一个<em>副作用 (effect)</em> 来跟踪当前正在运行的函数。副作用是一个函数的包裹器，在函数被调用之前就启动跟踪。Vue 知道哪个副作用在何时运行，并能在需要时再次执行它。</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// 维持一个执行副作用的栈</span>
+<span class="token keyword">const</span> runningEffects <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+<span class="token keyword">const</span> <span class="token function-variable function">createEffect</span> <span class="token operator">=</span> <span class="token parameter">fn</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// 将传来的 fn 包裹在一个副作用函数中</span>
+  <span class="token keyword">const</span> <span class="token function-variable function">effect</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+    runningEffects<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>effect<span class="token punctuation">)</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    runningEffects<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 立即自动执行副作用</span>
+  <span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="vue-如何跟踪变化" tabindex="-1"><a class="header-anchor" href="#vue-如何跟踪变化" aria-hidden="true">#</a> Vue 如何跟踪变化</h2>
+<h3 id="vue2-object-defineproperty" tabindex="-1"><a class="header-anchor" href="#vue2-object-defineproperty" aria-hidden="true">#</a> vue2（Object.defineProperty）</h3>
+<p>2.0的双向绑定首先要深克隆一份data数据，通过Object.defineProperty监听data里面的每个属性，通过get/set方法达到双向绑定数据。</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span><span class="token string">''</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> virtualDom <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
+  <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> virtualDom<span class="token punctuation">.</span>name
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    virtualDom<span class="token punctuation">.</span>name <span class="token operator">=</span> val
+    <span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">function</span> <span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  spanName<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> obj<span class="token punctuation">.</span>name
+  inputName<span class="token punctuation">.</span>value <span class="token operator">=</span> obj<span class="token punctuation">.</span>name
+<span class="token punctuation">}</span>
+<span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+inputName<span class="token punctuation">.</span><span class="token function-variable function">oninput</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value
+<span class="token punctuation">}</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"chad"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>缺点：需要深度克隆数据、无法实现深度监听，例如监听值为对象时子属性或数组的成员。</p>
+<p><strong>解决方法</strong></p>
+<ol>
+<li>
+<p>对于对象。Vue 无法检测到 property 的添加或删除。但是，可以使用 <code>Vue.set(object, propertyName, value)</code> 方法向嵌套对象添加响应式 property：</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>Vue<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>someObject<span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>还可以使用 <code>vm.$set</code> 实例方法，这也是全局 <code>Vue.set</code> 方法的别名：</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>someObject<span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+<li>
+<p>对于数组。Vue 不能检测以下数组的变动：</p>
+<ol>
+<li>当你利用索引直接设置一个数组项时，例如：<code>vm.items[indexOfItem] = newValue</code></li>
+<li>当你修改数组的长度时，例如：<code>vm.items.length = newLength</code></li>
+</ol>
+<p>为了解决第一种问题，以下两种方式都可以实现和 <code>vm.items[indexOfItem] = newValue</code> 相同的效果，同时也会触发响应性系统的状态更新：</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// Vue.set</span>
+Vue<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>items<span class="token punctuation">,</span> indexOfItem<span class="token punctuation">,</span> newValue<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token comment">// Array.prototype.splice</span>
+vm<span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>indexOfItem<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> newValue<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>你也可以使用 <a href="https://cn.vuejs.org/v2/api/#vm-set" target="_blank" rel="noopener noreferrer"><code>vm.$set</code><OutboundLink/></a> 实例方法，该方法是全局方法 <code>Vue.set</code> 的一个别名：</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>vm<span class="token punctuation">.</span><span class="token function">$set</span><span class="token punctuation">(</span>vm<span class="token punctuation">.</span>items<span class="token punctuation">,</span> indexOfItem<span class="token punctuation">,</span> newValue<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div><p>为了解决第二种问题，你可以使用 <code>splice</code>：</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code>vm<span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>newLength<span class="token punctuation">)</span>
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br></div></div></li>
+</ol>
+<h3 id="vue3-proxy" tabindex="-1"><a class="header-anchor" href="#vue3-proxy" aria-hidden="true">#</a> vue3（Proxy）</h3>
+<p>3.0通过Proxy监听整个对象，现实无须克隆数据，且能够深度监听的效果。</p>
+<div class="language-javascript ext-js line-numbers-mode"><pre v-pre class="language-javascript"><code><span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+obj <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span><span class="token punctuation">{</span>
+  <span class="token function">get</span><span class="token punctuation">(</span>targer<span class="token punctuation">,</span>prop<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> targer<span class="token punctuation">[</span>prop<span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">set</span><span class="token punctuation">(</span>targer<span class="token punctuation">,</span>prop<span class="token punctuation">,</span>value<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    targer<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> value
+    <span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">function</span> <span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  spanName<span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> obj<span class="token punctuation">.</span>name
+  inputName<span class="token punctuation">.</span>value <span class="token operator">=</span> obj<span class="token punctuation">.</span>name
+<span class="token punctuation">}</span>
+<span class="token function">observer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">"chad"</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+inputName<span class="token punctuation">.</span><span class="token function-variable function">oninput</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  obj<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value
+<span class="token punctuation">}</span>
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><h2 id="如何让渲染响应变化" tabindex="-1"><a class="header-anchor" href="#如何让渲染响应变化" aria-hidden="true">#</a> 如何让渲染响应变化</h2>
+<p>一个组件的模板被编译成一个 <a href="https://v3.cn.vuejs.org/guide/render-function.html" target="_blank" rel="noopener noreferrer"><code>render</code><OutboundLink/></a>创建 <a href="https://v3.cn.vuejs.org/guide/render-function.html#%E8%99%9A%E6%8B%9F-dom-%E6%A0%91" target="_blank" rel="noopener noreferrer">VNodes<OutboundLink/></a>，描述该组件应该如何被渲染。它被包裹在一个副作用中，允许 Vue 在运行时跟踪被“触达”的 property。</p>
+</template>
