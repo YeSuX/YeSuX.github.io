@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 1998 --open",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
@@ -14,6 +14,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.1.0",
     "typescript": "^4.6.4",
+    "unocss": "^0.45.22",
     "vite": "^3.1.0",
     "vue-tsc": "^0.40.4"
   }
