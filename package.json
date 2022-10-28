@@ -1,23 +1,19 @@
 {
-  "name": "yesux-github-io",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "suxiong-blog",
+  "version": "1.0.0",
+  "description": "suxiong's blog",
   "scripts": {
-    "dev": "vite --port 1998 --open",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
-  "dependencies": {
-    "@vueuse/core": "^9.2.0",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.5"
-  },
+  "main": "index.js",
+  "repository": "https://github.com/YeSuX/YeSuX.github.io.git",
+  "author": "suxiong",
+  "license": "MIT",
+  "private": true,
   "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.0",
-    "typescript": "^4.6.4",
-    "unocss": "^0.45.22",
-    "vite": "^3.1.0",
-    "vue-tsc": "^0.40.4"
+    "vitepress": "^1.0.0-alpha.26",
+    "vue": "^3.2.41"
   }
 }
