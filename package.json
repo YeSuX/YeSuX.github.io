@@ -15,5 +15,8 @@
   "devDependencies": {
     "vitepress": "^1.0.0-alpha.26",
     "vue": "^3.2.41"
+  },
+  "dependencies": {
+    "naive-ui": "^2.33.5"
   }
 }
