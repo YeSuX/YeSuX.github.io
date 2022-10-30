@@ -1,8 +1,7 @@
 <script setup>
-import pkg from 'naive-ui';
-const { NButton } = pkg;
+// import {NButton} from 'naive-ui'
 </script>
 
 # index
-
+<!-- <Demo/> -->
 <n-button>naive-ui</n-button>

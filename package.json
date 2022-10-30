@@ -2,6 +2,7 @@
   "name": "suxiong-blog",
   "version": "1.0.0",
   "description": "suxiong's blog",
+  "type": "commonjs",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
