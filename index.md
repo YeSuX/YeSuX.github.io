@@ -1,4 +1,5 @@
 <script setup>
+    import {catImgs,runningImgs} from './assets/imgs.ts'
 </script>
 
 # About me
@@ -13,8 +14,8 @@ Hey, I am Ye, Suxiong, a front-end developer. Here is my cat:cat:, 南瓜 /nan g
     <img
       class="carousel-img"
       style="width: 100%; height: 240px;object-fit: contain;"
-      v-for="idx in 7"
-      :src="`cats/cats_${idx}.jpg`"/>
+      v-for="url in catImgs"
+      :src="url"/>
 </n-carousel>
 
 I like building collaborative experiences, interactive articles, and open-source projects. Working at [Citi](https://www.citigroup.com/citi/).
@@ -32,8 +33,8 @@ I join the activities of volunteers actively. And I joined [Running in the Dark]
     <img
       class="carousel-img"
       style="width: 100%; height: 240px;object-fit: contain;"
-      v-for="idx in 5"
-      :src="`darkRunning/running_${idx}.jpg`"/>
+      v-for="url in runningImgs"
+      :src="url"/>
 </n-carousel>
 
 ---
