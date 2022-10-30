@@ -14,10 +14,13 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "sass": "^1.55.0",
+    "unocss": "^0.46.1",
     "vitepress": "^1.0.0-alpha.26",
     "vue": "^3.2.41"
   },
   "dependencies": {
+    "gsap": "^3.11.3",
     "naive-ui": "^2.33.5"
   }
 }

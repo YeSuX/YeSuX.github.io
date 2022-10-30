@@ -9,6 +9,7 @@ export default defineConfig({
     lineNumbers: true,
   },
   themeConfig: {
+    logo: 'logo.svg',
     nav: [
       { text: 'Blog', link: '/blog/' },
       { text: 'Projects', link: '/projects/' },
