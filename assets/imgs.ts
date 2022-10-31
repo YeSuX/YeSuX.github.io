@@ -12,6 +12,5 @@ export const runningImgs = [
   'https://s3.bmp.ovh/imgs/2022/10/30/6741c7b3d70886cc.jpg',
   'https://s3.bmp.ovh/imgs/2022/10/30/79bf3e6d74934382.jpg',
   'https://s3.bmp.ovh/imgs/2022/10/30/46e7dcd40da85884.jpg',
-  'https://s3.bmp.ovh/imgs/2022/10/30/7fab3df7e15a2122.jpg',
   'https://s3.bmp.ovh/imgs/2022/10/30/8215d5b404b8a9eb.jpg',
 ];
