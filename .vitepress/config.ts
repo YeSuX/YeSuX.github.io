@@ -14,7 +14,7 @@ export default defineConfig({
       { text: 'Blog', link: '/blog/' },
       { text: 'Projects', link: '/projects/' },
       { text: 'Talks', link: '/talks/' },
-      { text: 'Podcats', link: '/podcats/' },
+      { text: 'Podcasts', link: '/podcasts/' },
       { text: 'Streams', link: '/streams/' },
       { text: 'Demos', link: '/demos/' },
     ],
