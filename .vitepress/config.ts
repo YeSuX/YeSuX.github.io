@@ -1,4 +1,48 @@
 import { defineConfig } from 'vitepress';
+
+const sidebarBlog = () => {
+  return [
+    {
+      text: '随记',
+      collapsible: true,
+      items: [
+        {
+          text: '2022-10',
+          link: '/blog/2022-10-note.md',
+        },
+        {
+          text: '2022-08&09',
+          link: '/blog/2022-8&9-note.md',
+        },
+        {
+          text: '2022-07',
+          link: '/blog/2022-7-note.md',
+        },
+      ],
+    },
+    {
+      text: '技术',
+      collapsible: true,
+      items: [
+        {
+          text: '探究基于RxJS的前端状态管理及接口防腐策略',
+          link: '/blog/what-is-rxjs.md',
+        },
+      ],
+    },
+    {
+      text: '思考',
+      collapsible: true,
+      items: [
+        {
+          text: '对于「程序员」这个职业的一些思考',
+          link: '/blog/what-should-i-do-to-think-as-a-developer.md',
+        },
+      ],
+    },
+  ];
+};
+
 export default defineConfig({
   lang: 'en-US',
   title: 'suxiong',
@@ -10,13 +54,16 @@ export default defineConfig({
   },
   themeConfig: {
     logo: 'logo.svg',
+    sidebar: {
+      '/blog/': sidebarBlog(),
+    },
     nav: [
-      { text: 'Blog', link: '/blog/' },
-      { text: 'Projects', link: '/projects/' },
-      { text: 'Talks', link: '/talks/' },
-      { text: 'Podcasts', link: '/podcasts/' },
-      { text: 'Streams', link: '/streams/' },
-      { text: 'Demos', link: '/demos/' },
+      { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
+      { text: 'Projects', link: '/projects/', activeMatch: '/projects/' },
+      { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
+      { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
+      { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
+      { text: 'Demos', link: '/demos/', activeMatch: '/demos/' },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/YeSuX' },
