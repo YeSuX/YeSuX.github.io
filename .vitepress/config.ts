@@ -28,6 +28,16 @@ const sidebarBlog = () => {
           text: '探究基于RxJS的前端状态管理及接口防腐策略',
           link: '/blog/what-is-rxjs.md',
         },
+        {
+          text: '键盘侠',
+          collapsible: true,
+          items: [
+            {
+              text: 'vim',
+              link: '/blog/what-is-vim.md',
+            },
+          ],
+        },
       ],
     },
     {
