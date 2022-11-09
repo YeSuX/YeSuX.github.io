@@ -25,6 +25,10 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
+          text: 'NodeJS',
+          link: '/blog/node/index.md',
+        },
+        {
           text: '探究基于RxJS的前端状态管理及接口防腐策略',
           link: '/blog/what-is-rxjs.md',
         },
