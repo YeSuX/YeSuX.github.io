@@ -1,7 +1,7 @@
 <script setup>
 import {outline} from './outline.ts'
 import { useData,useRouter } from 'vitepress'
-import { darkTheme } from 'naive-ui'
+import { darkTheme,createDiscreteApi,lightTheme } from 'naive-ui'
 import {computed} from 'vue'
 import {title2route} from '/utils/common.ts'
 
@@ -12,8 +12,27 @@ const theme = computed(()=>{
     return isDark.value?darkTheme:null
 })
 
-const goto = (title)=>{
+const configProviderPropsRef = computed(() => ({
+  theme: isDark ? darkTheme:lightTheme
+}))
+
+
+const { message } = createDiscreteApi(
+  ['message'],
+  {
+    configProviderProps: configProviderPropsRef
+  }
+)
+
+const goto = (item)=>{
+    const {title, type} = item
     const {path} = route
+
+    if(!type){
+        message.error("This section haven't completed!");
+        return;
+    }
+
     go(title2route(title,path))
 }
 
@@ -59,7 +78,7 @@ const goto = (title)=>{
             :content="item.content"
             :line-type="item.type?'default':'dashed'"
             class="node-outline canHover"
-            @click="goto(item.title)"
+            @click="goto(item)"
         />
     </n-timeline>
 </n-config-provider>
