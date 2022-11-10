@@ -11,6 +11,7 @@ export const outline: IOutline[] = [
     content: 'Introduction',
   },
   {
+    type: 'success',
     title: 'JavaScript Refresher',
     content: 'Optional: JavaScript-A Quick Refresher',
   },
