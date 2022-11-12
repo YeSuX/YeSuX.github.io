@@ -16,7 +16,8 @@ export const outline: IOutline[] = [
     content: 'Optional: JavaScript-A Quick Refresher',
   },
   {
-    title: 'Node.js Basics',
+    type: 'success',
+    title: 'NodeJS Basics',
     content: 'Understanding the Basics',
   },
   {
