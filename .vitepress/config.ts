@@ -7,10 +7,6 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
-          text: '2022-10',
-          link: '/blog/2022-10-note.md',
-        },
-        {
           text: '2022-08&09',
           link: '/blog/2022-8&9-note.md',
         },
@@ -25,10 +21,6 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
-          text: 'NodeJS',
-          link: '/blog/node/index.md',
-        },
-        {
           text: '探究基于RxJS的前端状态管理及接口防腐策略',
           link: '/blog/what-is-rxjs.md',
         },
@@ -41,6 +33,10 @@ const sidebarBlog = () => {
         {
           text: '对于「程序员」这个职业的一些思考',
           link: '/blog/what-should-i-do-to-think-as-a-developer.md',
+        },
+        {
+          text: '程序员该如何写作',
+          link: '/blog/how-to-write-as-a-developer.md',
         },
       ],
     },
