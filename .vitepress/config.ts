@@ -24,6 +24,10 @@ const sidebarBlog = () => {
           text: '探究基于RxJS的前端状态管理及接口防腐策略',
           link: '/blog/what-is-rxjs.md',
         },
+        {
+          text:'前端规范代码检查工具的最佳实践',
+          link:'/blog/fontend-standard-tool-best-practice.md'
+        }
       ],
     },
     {
