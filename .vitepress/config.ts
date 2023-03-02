@@ -51,6 +51,12 @@ const sidebarBlog = () => {
 export default defineConfig({
   lang: 'en-US',
   title: 'suxiong',
+  head:[
+    [
+      'script',
+      { src: 'https://platform.twitter.com/widgets.js', charset: 'utf-8', async: '' }
+    ]
+  ],
   description: "suxiong's blog",
   lastUpdated: true,
   cleanUrls: 'without-subfolders',
