@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 
+
 const sidebarBlog = () => {
   return [
     {
@@ -64,9 +65,11 @@ export default defineConfig({
     nav: [
       { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
       { text: 'Projects', link: '/projects/', activeMatch: '/projects/' },
-      { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
-      { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
-      { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
+      { text: 'Translations', link: '/translations/', activeMatch: '/translations/' },
+      { text: 'Activities', link: '/activities/', activeMatch: '/activities/' },
+      // { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
+      // { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
+      // { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
       { text: 'Demos', link: '/demos/', activeMatch: '/demos/' },
     ],
     socialLinks: [
