@@ -4,11 +4,15 @@
 List of articles that I writed
 :::
 
+## 2023
+
 [前端规范代码检查工具的最佳实践](fontend-standard-tool-best-practice.md)
 
-[探究基于RxJS的前端状态管理及接口防腐策略](what-is-rxjs.md)
-
 [程序员该如何写作](how-to-write-as-a-developer.md)
+
+## 2022
+
+[探究基于RxJS的前端状态管理及接口防腐策略](what-is-rxjs.md)
 
 [对「程序员」这个职业的一些思考](what-should-i-do-to-think-as-a-developer.md)
 
