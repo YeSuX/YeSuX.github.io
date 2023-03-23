@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-const props = defineProps(["title", "description", "link"]);
-const { title, description, link } = props;
+const props = defineProps(["title", "description", "link", "icon"]);
+const { title, description, link, icon } = props;
 
 const routeToLink = () => {
   location.href = link;
@@ -9,7 +9,7 @@ const routeToLink = () => {
 
 <template>
   <a class="card" :href="link">
-    <div class="icon">icon</div>
+    <img v-if="icon" class="icon" :src="icon" alt="icon" />
     <div class="content">
       <div class="title">{{ title }}</div>
       <div class="des">{{ description }}</div>
@@ -30,8 +30,11 @@ const routeToLink = () => {
   line-height: 1.25rem;
 }
 .icon {
-  padding-top: 0.5rem;
-  padding-right: 1.25rem;
+  width: 3rem;
+  margin-right: 2rem;
+  background: rgba(255, 255, 255, 1);
+  padding: 5px;
+  border-radius: 2px;
 }
 .card {
   padding: 0.8em 1em;
