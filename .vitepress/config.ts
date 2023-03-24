@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
 
-
 const sidebarBlog = () => {
   return [
     {
@@ -22,13 +21,17 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
+          text: '浅谈前端渲染模式',
+          link: '/blog/5-rendering-modes.md',
+        },
+        {
           text: '探究基于RxJS的前端状态管理及接口防腐策略',
           link: '/blog/what-is-rxjs.md',
         },
         {
-          text:'前端规范代码检查工具的最佳实践',
-          link:'/blog/fontend-standard-tool-best-practice.md'
-        }
+          text: '前端规范代码检查工具的最佳实践',
+          link: '/blog/fontend-standard-tool-best-practice.md',
+        },
       ],
     },
     {
@@ -51,11 +54,15 @@ const sidebarBlog = () => {
 export default defineConfig({
   lang: 'en-US',
   title: 'suxiong',
-  head:[
+  head: [
     [
       'script',
-      { src: 'https://platform.twitter.com/widgets.js', charset: 'utf-8', async: '' }
-    ]
+      {
+        src: 'https://platform.twitter.com/widgets.js',
+        charset: 'utf-8',
+        async: '',
+      },
+    ],
   ],
   description: "suxiong's blog",
   lastUpdated: true,
@@ -71,7 +78,11 @@ export default defineConfig({
     nav: [
       { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
       { text: 'Projects', link: '/projects/', activeMatch: '/projects/' },
-      { text: 'Translations', link: '/translations/', activeMatch: '/translations/' },
+      {
+        text: 'Translations',
+        link: '/translations/',
+        activeMatch: '/translations/',
+      },
       { text: 'Activities', link: '/activities/', activeMatch: '/activities/' },
       // { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
       // { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
