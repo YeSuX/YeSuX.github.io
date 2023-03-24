@@ -1,5 +1,5 @@
 # 浅谈前端渲染模式
-
+[[toc]]
 ## 前言
 
 近期，React正式发布了全新的React官方文档——[react.dev](https://react.dev/)。目前只发布了英文版，中文版并未上线。
