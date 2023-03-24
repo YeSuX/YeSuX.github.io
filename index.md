@@ -41,7 +41,7 @@ I join the activities of volunteers actively. And I joined [Running in the Dark]
 
 <br/>
 
-:iphone: Find me on [GitHub](https://github.com/YeSuX), [Twitter](https://twitter.com/YeSuX1998), [Linkedin](https://discord.gg/evZrD9h5qW).
+:iphone: Find me on [GitHub](https://github.com/YeSuX), [Twitter](https://twitter.com/YeSuX1998), [Linkedin](https://www.linkedin.com/in/suxiong-ye-b4b080228/).
 
 :mailbox: Mail me at [suxiong1998@gmail](mailto:suxiong1998@gmail.com).
 

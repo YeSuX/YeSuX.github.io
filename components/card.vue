@@ -39,7 +39,6 @@ const routeToLink = () => {
 .card {
   padding: 0.8em 1em;
   display: flex;
-  justify-content: center;
   align-items: center;
   transition: 0.2s all ease-out;
   text-decoration: none;

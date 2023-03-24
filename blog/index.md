@@ -5,6 +5,7 @@ List of articles that I writed
 :::
 
 ## 2023
+[探究前端渲染模式](5-rendering-modes.md)
 
 [前端规范代码检查工具的最佳实践](fontend-standard-tool-best-practice.md)
 

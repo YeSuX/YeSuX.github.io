@@ -11,8 +11,7 @@ List of projects that I am proud of
 :::
 <Card 
     title='@suxiong/config' 
-    description='A modern, high-performance monorepo project designed with 
-        Google Translate JS SDK. Vue and react are supported!'
+    description="Suxiong's standard config presets."
     link='https://github.com/YeSuX/config'
     icon='https://s3.bmp.ovh/imgs/2023/03/23/78207495117a55a2.png'
     ></Card>
