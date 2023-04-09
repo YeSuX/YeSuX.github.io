@@ -63,6 +63,15 @@ export default defineConfig({
         async: '',
       },
     ],
+    [
+      'script',
+      {
+        src: 'https://cdn.jsdelivr.net/gh/jryebread/shpe@main/chat.min.js',
+        charset: 'utf-8',
+        async: '',
+        id: '苏雄-6caa0941-be54-4f29-8193-fe697f5c8c8c',
+      },
+    ],
   ],
   description: "suxiong's blog",
   lastUpdated: true,
