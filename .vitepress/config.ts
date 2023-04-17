@@ -93,7 +93,7 @@ export default defineConfig({
         activeMatch: '/translations/',
       },
       { text: 'Activities', link: '/activities/', activeMatch: '/activities/' },
-      // { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
+      { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
       // { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
       // { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
       { text: 'Demos', link: '/demos/', activeMatch: '/demos/' },
