@@ -21,6 +21,10 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
+          text: '前端该如何调试',
+          link: '/blog/how-to-debug-in-front-end-development/index.md'
+        },
+        {
           text: '浅谈前端渲染模式',
           link: '/blog/5-rendering-modes.md',
         },

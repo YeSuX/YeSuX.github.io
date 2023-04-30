@@ -5,6 +5,8 @@ List of articles that I writed
 :::
 
 ## 2023
+[:books: 前端该如何调试(系列)](./how-to-debug-in-front-end-development/index.md)
+
 [探究前端渲染模式](5-rendering-modes.md)
 
 [前端规范代码检查工具的最佳实践](fontend-standard-tool-best-practice.md)
