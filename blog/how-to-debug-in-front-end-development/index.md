@@ -9,3 +9,5 @@
 :::
 
 [浅谈前端调试](./introduction.md)
+
+[如何调试网页的JS](./how-to-debug-the-js-of-webpage.md)
