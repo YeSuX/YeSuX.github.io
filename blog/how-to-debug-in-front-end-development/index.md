@@ -13,3 +13,5 @@
 [如何调试网页的JS](./how-to-debug-the-js-of-webpage.md)
 
 [VSCode Chrome Debugger配置详解](./vscode-chrome-debugger-configuration.md)
+
+[浅谈sourcemap](./sourcemap.md)
