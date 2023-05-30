@@ -21,6 +21,10 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
+          text:'探究 React',
+          link:'/blog/react/index.md'
+        },
+        {
           text: '前端该如何调试',
           link: '/blog/how-to-debug-in-front-end-development/index.md'
         },
