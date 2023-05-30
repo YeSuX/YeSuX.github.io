@@ -68,13 +68,13 @@ function Hello() {
 }
 ```
 
-1. 转换过程：在转换过程中，Babel会调用`React.createElement()` 方法来创建React Element。以上面例子举例，Babel会其转换为以下JavaScript代码：
+3. 转换过程：在转换过程中，Babel会调用`React.createElement()` 方法来创建React Element。以上面例子举例，Babel会其转换为以下JavaScript代码：
 
 ```jsx
 React.createElement("div", { className: "container" }, "Hello, Cooper!");
 ```
 
-1. 生成代码：Babel会将转换后的JavaScript代码生成到输出文件中，以便在浏览器中运行。
+4. 生成代码：Babel会将转换后的JavaScript代码生成到输出文件中，以便在浏览器中运行。
 
 ## createElement()实现原理
 
