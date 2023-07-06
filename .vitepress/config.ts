@@ -47,6 +47,10 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
+          text: '浅谈「新闻已死」',
+          link: '/blog/news-is-dead.md',
+        },
+        {
           text: '对于「程序员」这个职业的一些思考',
           link: '/blog/what-should-i-do-to-think-as-a-developer.md',
         },

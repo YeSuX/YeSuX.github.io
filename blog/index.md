@@ -5,6 +5,9 @@ List of articles that I writed
 :::
 
 ## 2023
+
+[浅谈「新闻已死」](./news-is-dead.md)
+
 [:books: 探究 React(系列)](./react/index.md)
 
 [:books: 前端该如何调试(系列)](./how-to-debug-in-front-end-development/index.md)
