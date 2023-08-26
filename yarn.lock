@@ -1127,6 +1127,11 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
+muuri@^0.9.5:
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/muuri/-/muuri-0.9.5.tgz#ce5ccf28a596f67a4d9370cac6d3e661db43a380"
+  integrity sha512-nJL9/Pd5IaIXGAVunBs/LLQ+v6tPkvlqCYrlauWESgkVFr+F+CRf8HnayRh4AqiQ1S/PIEN39fhJSe4L5rLlxg==
+
 naive-ui@^2.33.5:
   version "2.33.5"
   resolved "https://registry.yarnpkg.com/naive-ui/-/naive-ui-2.33.5.tgz#4ae532046c26a8dca61dc857f9566d25d1b9a642"
