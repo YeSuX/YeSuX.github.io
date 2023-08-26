@@ -1,7 +1,10 @@
+<script setup lang="ts">
+import Tabbar from './Tabbar.vue';
+</script>
 <template>
   <nav class="header">
     <div class="logoWrapper">Suxiong</div>
-    <div class="filterContainer">filter</div>
+    <Tabbar/>
     <a href="mailto:suxiong1998@gmail.com" class="contactWrapper">
       <p>Contact</p>
     </a>

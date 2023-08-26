@@ -15,6 +15,7 @@
   "private": true,
   "devDependencies": {
     "muuri": "^0.9.5",
+    "popmotion": "^11.0.5",
     "sass": "^1.55.0",
     "unocss": "^0.46.1",
     "vitepress": "^1.0.0-alpha.26",
