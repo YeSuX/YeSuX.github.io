@@ -1,6 +1,10 @@
+<script setup lang="ts">
+import Nav from '../components/Nav.vue'
+</script>
+
 <template>
   <div class="container">
-    123
+    <Nav/>
   </div>
 </template>
 <style scoped>
