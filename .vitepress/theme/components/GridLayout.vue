@@ -10,7 +10,7 @@ onMounted(() => {
   var pckry = new Packery(elem, {
     // options
     itemSelector: '.grid-item',
-    gutter: 10
+    gutter: 12
   });
 
   pckry.getItemElements().forEach(function (itemElem) {
@@ -23,15 +23,15 @@ onMounted(() => {
 <template>
   <div class="gridContainer">
     <div class="grid">
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
-      <div class="grid-item" />
+      <div class="grid-item width-2" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
+      <div class="grid-item width-1" />
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ onMounted(() => {
 
 .grid-item {
   opacity: 1;
-  width: 280px;
+  /* width: 280px; */
   height: 280px;
   border-radius: 32px;
   display: flex;

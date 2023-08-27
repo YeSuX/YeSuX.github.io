@@ -5,3 +5,20 @@
   -webkit-transition: -webkit-transform 0.2s;
   transition: transform 0.2s;
 }
+
+.width-1{
+  width: 280px;  
+}
+
+.width-2{
+  width: 572px;  
+}
+
+@media (max-width: 612px) {
+  .width-1{
+    width: 100%;
+  }
+  .width-2{
+    width: 100%;
+  }
+}
