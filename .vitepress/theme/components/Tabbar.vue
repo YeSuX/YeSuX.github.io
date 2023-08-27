@@ -20,8 +20,12 @@ const changeHighlight = (title) => {
 <style scoped>
 .highlight {
   border-radius: 16px;
-  background: rgb(255, 255, 255);
+  background: var(--vp-c-gray-soft);
   z-index: -1;
+}
+
+.tab:hover{
+  color: var(--vp-c-text-3);
 }
 
 .tab {
@@ -37,10 +41,10 @@ const changeHighlight = (title) => {
 
 .container {
   position: relative;
-  background: rgba(0, 0, 0, 0.04);
   border-radius: 23px;
   transform: translateX(0px);
   display: flex;
   padding: 5px;
+  border: 2px solid var(--vp-c-border);
 }
 </style>
