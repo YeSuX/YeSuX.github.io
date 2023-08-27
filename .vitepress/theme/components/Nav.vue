@@ -11,6 +11,22 @@ import Tabbar from './Tabbar.vue';
   </nav>
 </template>
 <style scoped>
+
+.contactWrapper{
+  letter-spacing: 0.25px;
+  font-weight: 500;
+}
+.header {
+  width: 100%;
+  height: 136px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 0px 3.5vw;
+}
+
 @media (max-width: 600px){
   .contactWrapper{
     display: none;
@@ -25,19 +41,5 @@ import Tabbar from './Tabbar.vue';
     justify-content: center;
     height: 180px;
   }
-}
-.contactWrapper{
-  letter-spacing: 0.25px;
-  font-weight: 500;
-}
-.header {
-  width: 100%;
-  height: 136px;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  padding: 0px 3.5vw;
 }
 </style>

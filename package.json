@@ -14,7 +14,9 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "draggabilly": "^3.0.0",
     "muuri": "^0.9.5",
+    "packery": "^2.1.2",
     "popmotion": "^11.0.5",
     "sass": "^1.55.0",
     "unocss": "^0.46.1",

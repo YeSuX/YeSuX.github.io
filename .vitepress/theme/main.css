@@ -1,0 +1,7 @@
+.packery-drop-placeholder {
+  outline: 3px dashed var(--vp-c-gray-soft);
+  border-radius: 36px;
+  /* transition position changing */
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
