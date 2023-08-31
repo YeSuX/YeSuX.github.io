@@ -4,6 +4,8 @@ import Draggabilly from 'draggabilly'
 import { onMounted } from 'vue'
 import NightModeToggle from './NightModeToggle.vue';
 import Bio from './Bio.vue';
+import SocialLinks from './SocialLinks.vue'
+
 
 onMounted(() => {
 
@@ -32,7 +34,9 @@ onMounted(() => {
       <div class="grid-item width-1">
         <NightModeToggle />
       </div>
-      <div class="grid-item width-1" />
+      <div class="grid-item width-1">
+        <SocialLinks />
+      </div>
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
@@ -53,7 +57,6 @@ onMounted(() => {
   justify-content: center;
   cursor: grab;
   background: var(--vp-c-gray-soft);
-  border: 2px solid var(--vp-c-border);
 }
 
 .grid-item:hover {
