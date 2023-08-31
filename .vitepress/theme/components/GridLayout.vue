@@ -2,6 +2,7 @@
 import Packery from 'packery'
 import Draggabilly from 'draggabilly'
 import { onMounted } from 'vue'
+import NightModeToggle from './NightModeToggle.vue';
 
 onMounted(() => {
 
@@ -25,7 +26,9 @@ onMounted(() => {
   <div class="gridContainer">
     <div class="grid">
       <div class="grid-item width-2" />
-      <div class="grid-item width-1" />
+      <div class="grid-item width-1">
+        <NightModeToggle/>
+      </div>
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
