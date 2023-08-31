@@ -3,6 +3,7 @@ import Packery from 'packery'
 import Draggabilly from 'draggabilly'
 import { onMounted } from 'vue'
 import NightModeToggle from './NightModeToggle.vue';
+import Bio from './Bio.vue';
 
 onMounted(() => {
 
@@ -25,9 +26,11 @@ onMounted(() => {
 <template>
   <div class="gridContainer">
     <div class="grid">
-      <div class="grid-item width-2" />
+      <div class="grid-item width-2">
+        <Bio />
+      </div>
       <div class="grid-item width-1">
-        <NightModeToggle/>
+        <NightModeToggle />
       </div>
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
@@ -40,7 +43,6 @@ onMounted(() => {
   </div>
 </template>
 <style scoped>
-
 .grid-item {
   opacity: 1;
   /* width: 280px; */
@@ -54,8 +56,8 @@ onMounted(() => {
   border: 2px solid var(--vp-c-border);
 }
 
-.grid-item:hover{
-  border: 4px solid var(--vp-c-border);
+.grid-item:hover {
+  /* border: 4px solid var(--vp-c-border); */
 }
 
 .grid-item:active {
