@@ -5,16 +5,17 @@ import { onMounted } from 'vue'
 
 onMounted(() => {
 
-  var elem = document.querySelector('.grid');
+  const elem = document.querySelector('.grid');
 
-  var pckry = new Packery(elem, {
+  const pckry = new Packery(elem, {
     // options
     itemSelector: '.grid-item',
-    gutter: 12
+    gutter: 12,
+    columnWidth: 280
   });
 
   pckry.getItemElements().forEach(function (itemElem) {
-    var draggie = new Draggabilly(itemElem);
+    const draggie = new Draggabilly(itemElem);
     pckry.bindDraggabillyEvents(draggie);
   });
 })
@@ -50,6 +51,10 @@ onMounted(() => {
   border: 2px solid var(--vp-c-border);
 }
 
+.grid-item:hover{
+  border: 4px solid var(--vp-c-border);
+}
+
 .grid-item:active {
   cursor: grabbing;
   cursor: -moz-grabbing;
@@ -62,7 +67,7 @@ onMounted(() => {
 }
 
 .gridContainer {
-  max-width: 1200px;
+  max-width: 1196px;
   position: relative;
   margin: 0 auto;
   padding: 0px 20px 80px 20px;
