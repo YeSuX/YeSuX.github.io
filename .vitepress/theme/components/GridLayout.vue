@@ -5,7 +5,7 @@ import { onMounted } from 'vue'
 import NightModeToggle from './NightModeToggle.vue';
 import Bio from './Bio.vue';
 import SocialLinks from './SocialLinks.vue'
-
+import { useRouter } from 'vitepress';
 
 onMounted(() => {
 
@@ -24,6 +24,12 @@ onMounted(() => {
   });
 })
 
+const router = useRouter()
+
+const test = ()=>{
+  router.go('../../../blog/index')
+}
+
 </script>
 <template>
   <div class="gridContainer">
@@ -37,7 +43,9 @@ onMounted(() => {
       <div class="grid-item width-1">
         <SocialLinks />
       </div>
-      <div class="grid-item width-1" />
+      <div class="grid-item width-1" @click="test">
+        test
+      </div>
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
@@ -56,7 +64,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   cursor: grab;
-  background: var(--vp-c-gray-soft);
+  background: var(--vp-c-bg-mute);
 }
 
 .grid-item:hover {

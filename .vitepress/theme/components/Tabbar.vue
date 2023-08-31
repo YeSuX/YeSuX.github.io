@@ -20,7 +20,7 @@ const changeHighlight = (title) => {
 <style scoped>
 .highlight {
   border-radius: 16px;
-  background: var(--vp-c-gray-soft);
+  background: var(--vp-c-bg-mute);
   z-index: -1;
 }
 
@@ -45,6 +45,6 @@ const changeHighlight = (title) => {
   transform: translateX(0px);
   display: flex;
   padding: 5px;
-  border: 2px solid var(--vp-c-border);
+  border: 2px solid var(--vp-c-divider-light);
 }
 </style>

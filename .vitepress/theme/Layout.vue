@@ -3,7 +3,7 @@ import { useData } from 'vitepress'
 import Home from './pages/Home.vue'
 import DefaultTheme from 'vitepress/theme'
 
-const { page, frontmatter } = useData()
+const { frontmatter } = useData()
 const { Layout } = DefaultTheme
 </script>
 
@@ -11,5 +11,5 @@ const { Layout } = DefaultTheme
   <div v-if="frontmatter.layout === 'home'">
     <Home />
   </div>
-  <Layout v-else />
+  <Layout v-else/>
 </template>

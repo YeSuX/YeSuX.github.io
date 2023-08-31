@@ -21,8 +21,8 @@ const sidebarBlog = () => {
       collapsible: true,
       items: [
         {
-          text:'探究 React',
-          link:'/blog/react/index.md'
+          text: '探究 React',
+          link: '/blog/react/index.md'
         },
         {
           text: '前端该如何调试',
@@ -65,7 +65,7 @@ const sidebarBlog = () => {
 
 export default defineConfig({
   lang: 'en-US',
-  title: 'suxiong',
+  title: 'Home',
   head: [
     [
       'script',
@@ -75,16 +75,8 @@ export default defineConfig({
         async: '',
       },
     ],
-    [
-      'script',
-      {
-        src: 'https://cdn.jsdelivr.net/gh/jryebread/shpe@main/chat.min.js',
-        charset: 'utf-8',
-        async: '',
-        id: '苏雄-6caa0941-be54-4f29-8193-fe697f5c8c8c',
-      },
-    ],
   ],
+  appearance: false,
   description: "suxiong's blog",
   lastUpdated: true,
   cleanUrls: 'without-subfolders',
@@ -92,33 +84,33 @@ export default defineConfig({
     lineNumbers: true,
   },
   themeConfig: {
-    logo: 'logo.svg',
-    sidebar: {
-      '/blog/': sidebarBlog(),
-    },
-    nav: [
-      { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
-      { text: 'Projects', link: '/projects/', activeMatch: '/projects/' },
-      {
-        text: 'Translations',
-        link: '/translations/',
-        activeMatch: '/translations/',
-      },
-      { text: 'Activities', link: '/activities/', activeMatch: '/activities/' },
-      { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
-      // { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
-      // { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
-      { text: 'Demos', link: '/demos/', activeMatch: '/demos/' },
-    ],
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/YeSuX' },
-      { icon: 'twitter', link: 'https://twitter.com/YeSuX1998' },
-      {
-        icon: 'linkedin',
-        link: 'https://www.linkedin.com/in/ye-suxiong-b4b080228/',
-      },
-      { icon: 'discord', link: 'https://discord.gg/evZrD9h5qW' },
-    ],
+    // logo: 'logo.svg',
+    // sidebar: {
+    //   '/blog/': sidebarBlog(),
+    // },
+    // nav: [
+    //   { text: 'Blog', link: '/blog/', activeMatch: '/blog/' },
+    //   { text: 'Projects', link: '/projects/', activeMatch: '/projects/' },
+    //   {
+    //     text: 'Translations',
+    //     link: '/translations/',
+    //     activeMatch: '/translations/',
+    //   },
+    //   { text: 'Activities', link: '/activities/', activeMatch: '/activities/' },
+    //   { text: 'Talks', link: '/talks/', activeMatch: '/talks/' },
+    //   // { text: 'Podcasts', link: '/podcasts/', activeMatch: '/podcasts/' },
+    //   // { text: 'Streams', link: '/streams/', activeMatch: '/streams/' },
+    //   { text: 'Demos', link: '/demos/', activeMatch: '/demos/' },
+    // ],
+    // socialLinks: [
+    //   { icon: 'github', link: 'https://github.com/YeSuX' },
+    //   { icon: 'twitter', link: 'https://twitter.com/YeSuX1998' },
+    //   {
+    //     icon: 'linkedin',
+    //     link: 'https://www.linkedin.com/in/ye-suxiong-b4b080228/',
+    //   },
+    //   { icon: 'discord', link: 'https://discord.gg/evZrD9h5qW' },
+    // ],
     footer: {
       message: 'Light tomorrow with today.',
       copyright: '2022-present © suxiong',
