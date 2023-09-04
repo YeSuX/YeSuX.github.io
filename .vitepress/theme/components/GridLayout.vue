@@ -6,6 +6,8 @@ import NightModeToggle from './NightModeToggle.vue';
 import Bio from './Bio.vue';
 import SocialLinks from './SocialLinks.vue'
 import { useRouter } from 'vitepress';
+import { blogIndex } from '../../../blog/index'
+import BlogCard from './BlogCard.vue'
 
 onMounted(() => {
 
@@ -24,12 +26,6 @@ onMounted(() => {
   });
 })
 
-const router = useRouter()
-
-const test = ()=>{
-  router.go('../../../blog/index')
-}
-
 </script>
 <template>
   <div class="gridContainer">
@@ -43,14 +39,14 @@ const test = ()=>{
       <div class="grid-item width-1">
         <SocialLinks />
       </div>
-      <div class="grid-item width-1" @click="test">
-        test
+      <div v-for="blog in blogIndex" :key="blog.title" class="grid-item width-1">
+        <BlogCard :title="blog.title" :date="blog.date" :link="blog.link"/>
       </div>
+      <!-- <div class="grid-item width-1" />
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
       <div class="grid-item width-1" />
-      <div class="grid-item width-1" />
-      <div class="grid-item width-1" />
+      <div class="grid-item width-1" /> -->
     </div>
   </div>
 </template>
